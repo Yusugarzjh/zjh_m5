@@ -37,12 +37,12 @@ void setup() {
       Serial.println("Failed to connect. Make sure remote device is available and in range, then restart app."); 
     }
   }
-  // disconnect() may take upto 10 secs max
-//  if (SerialBT.disconnect()) {
-//    Serial.println("Disconnected Succesfully!");
-//  }
-//  // this would reconnect to the name(will use address, if resolved) or address used with connect(name/address).
-//  SerialBT.connect();
+//   disconnect() may take upto 10 secs max
+  if (SerialBT.disconnect()) {
+    Serial.println("Disconnected Succesfully!");
+  }
+  // this would reconnect to the name(will use address, if resolved) or address used with connect(name/address).
+  SerialBT.connect();
 }
 
 void loop() {

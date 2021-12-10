@@ -19,26 +19,38 @@ void setup() {
 }
 
 void loop() {
-    String inString="";
-  while (Serial.available()>0) {
-    char inChar = (char)Serial.read();
-    inString += inChar;
-    
-delay(10);
+// if (Serial.available()) {
+
+      SerialBT.println("asd");
+  
+//    SerialBT.write(Serial.read());
+//  }
+  if (SerialBT.available()) {
+    Serial.write(SerialBT.read());
   }
-  if(inString!="")
-  {   
-    if(inString=="OK\n")
-    Serial.print(inString);
-    Serial.print(inString);
+
+  
+
+  delay(1000);
+}
+//    String inString="";
+//  while (Serial.available()>0) {
+//    char inChar = (char)Serial.read();
+//    inString += inChar;
+//    
+//delay(10);
+//  }
+//  if(inString!="")
+//  {   
+//    if(inString=="OK\n")
+//    Serial.print(inString);
+//    Serial.print(inString);
 //   Serial.write(inString.c_str());
 //      Serial.println(strlen(inString.c_str()));
-  }
+//  }
 //if(strcmp("OK",inString.c_str()))
     
       
 //  if (SerialBT.available()) {
 //    Serial.write(SerialBT.read());
 //  }
-  delay(20);
-}
